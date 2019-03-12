@@ -1,0 +1,18 @@
+{
+
+  "manifest_version": 2,
+  "name": "ResponsiveHelper",
+  "version": "1.0",
+
+  "description": "A Firefox add-on to show the screen width and height when resizing the window",
+
+  "icons": {
+    "48": "icons/rh-icon-48.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*/"],
+    "js": ["responsive-helper.js"]
+  }]
+
+}
