@@ -28,7 +28,7 @@ const createElement = (type) => {
   // set style
   el.setAttribute(
     'style',
-    `font-family: monospace !important; position: fixed; z-index: ${indexArr.sort().pop() || 2}; top: 4px; right: 0px; background-color: lightgray; font-size: 12px; padding: 4px; color: black;`
+    `font-family: monospace !important; position: fixed; z-index: ${indexArr.length > 0 ?indexArr.sort().pop() : 2}; top: 4px; right: 0px; background-color: lightgray; font-size: 12px; padding: 4px; color: black;`
   );
   
   // set class
