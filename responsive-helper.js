@@ -43,6 +43,9 @@ const createElement = (type) => {
 // run create element helper
 const el = createElement('div');
 
+// define var for settimeout
+let clearDom;
+
 // catch resize action
 window.addEventListener('resize', () => {
   // append el
@@ -58,8 +61,10 @@ window.addEventListener('resize', () => {
     ${innerHeight}px
   `
 
+  window.clearTimeout(clearDom)
+
   // clear dom
-  setTimeout(() => {
+  clearDom = setTimeout(() => {
     document.querySelector(`.${className}`).remove();
-  }, 2000);
+  }, 2400);
 });
